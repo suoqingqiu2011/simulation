@@ -1,0 +1,31 @@
+c<-read.csv("data.csv",header=T)
+> c
+  time nombre.des.jetons.verts nombre.des.jetons.rouges nombre.des.cellules
+1    1                       1                        1                   3
+2    2                       0                        1                   2
+3    3                       1                        0                   1
+4    4                       0                        1                   0
+5    5                       0                        1                   0
+  traitement.de.cellules
+1                   true
+2                   true
+3                   true
+4                   true
+5                  false
+
+> x=t(c[1])
+> y=t(c[2])
+> z=t(c[3])
+> m=t(c[4])
+> n=t(c[5])
+> maxy=max(y)
+> maxz=max(z)
+> maxm=max(m)
+> maxn=max(n)
+> plot(x,y,type="o",xlab="time",ylab="nb_v",ylim=c(0,maxy),col="red",main="graph",pch=c(15))
+> lines(x,z,type="p",col="blue",pch=c(16))
+> lines(x,m,type="o",col="green",pch=c(17))
+> lines(x,n,type="o",col="yellow",pch=c(18))
+
+
+
